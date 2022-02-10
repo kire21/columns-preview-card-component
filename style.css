@@ -1,0 +1,135 @@
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --color-white-p: hsla(0, 0%, 100%, 0.75);
+  --color-gray-background-h-btn: hsl(0, 0%, 95%);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  background: var(--color-gray-background-h-btn);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+}
+
+p {
+  color: var(--color-white-p);
+  line-height: 1.6;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template: auto / repeat(3, 1fr);
+  }
+}
+
+/* Feature */
+
+.feature {
+  padding: 10rem 2rem;
+}
+
+.feature__card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature {
+    width: 67%;
+    margin: auto;
+  }
+}
+
+/* Card */
+
+.card {
+  padding: 5rem;
+}
+
+.card--heading {
+  text-transform: uppercase;
+  color: var(--color-gray-background-h-btn);
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.btn {
+  background: var(--color-gray-background-h-btn);
+  border: none;
+  border-radius: 30px;
+  padding: 1.3rem 2.8rem;
+  margin-top: 4rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn:hover {
+    background: transparent;
+    border: 2px solid var(--color-gray-background-h-btn);
+    color: var(--color-gray-background-h-btn);
+  }
+}
+
+.card__sedans {
+  background-color: var(--color-bright-orange);
+}
+
+.btn--sedans {
+  color: var(--color-bright-orange);
+}
+
+.card__suvs {
+  background: var(--color-dark-cyan);
+}
+
+.btn--suvs {
+  color: var(--color-dark-cyan);
+}
+
+.card__lux {
+  background: var(--color-very-dark-cyan);
+}
+
+.btn--lux {
+  color: var(--color-very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
